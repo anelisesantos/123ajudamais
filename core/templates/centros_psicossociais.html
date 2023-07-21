@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>123 Ajuda - Centros Psicossociais</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #E6E6FA; /* Lilás claro */
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #800080; /* Roxo */
+        }
+        p {
+            color: #000; /* Preto */
+            font-size: 16px;
+        }
+        .centro-psicossocial {
+            background-color: #FFF;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .centro-psicossocial h3 {
+            color: #800080; /* Roxo */
+            margin-bottom: 10px;
+        }
+        .centro-psicossocial p {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Centros Psicossociais</h2>
+        {% for centro in centros_psicossociais %}
+            <div class="centro-psicossocial">
+                <h3>{{ centro.nome }}</h3>
+                <p>Abrangência: {{ centro.abrangencia }}</p>
+                <p>Endereço: {{ centro.endereco }}</p>
+                <p>Contatos: {{ centro.contatos }}</p>
+                <p>Ramais: {{ centro.ramais }}</p>
+                <p>Email: {{ centro.email }}</p>
+            </div>
+        {% empty %}
+            <p>Nenhum centro psicossocial cadastrado.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

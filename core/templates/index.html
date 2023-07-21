@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>123 Ajuda</title>
+    <style>
+        body {
+            background-color: #E6E6FA; /* Lilás claro */
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #800080; /* Roxo */
+        }
+        p {
+            color: #000; /* Preto */
+            font-size: 16px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #800080;
+            color: #FFF;
+            padding: 10px 20px;
+            margin-top: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #600060; /* Roxo escuro */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao 123 Ajuda!</h1>
+        <p>O 123 Ajuda é um chatbot de saúde mental que oferece suporte e orientação para pacientes e conecta psicólogos com aqueles que precisam de ajuda.</p>
+        <p>Por favor, selecione uma opção abaixo:</p>
+        <a href="{% url 'cadastro_psicologo' %}" class="button">Sou um psicólogo</a>
+        <a href="{% url 'cadastro_paciente' %}" class="button">Sou um paciente</a>
+        <p>Já tenho cadastro, <a href="{% url 'login' %}">clique aqui</a> para fazer login.</p>
+        <a href="{% url 'centros_psicossociais' %}" class="button">Ver Centros Psicossociais</a>
+    </div>
+</body>
+</html>

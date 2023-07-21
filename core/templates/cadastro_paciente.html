@@ -1,0 +1,69 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>123 Ajuda - Cadastro de Paciente</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #E6E6FA; /* Lilás claro */
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #800080; /* Roxo */
+        }
+        p {
+            color: #000; /* Preto */
+            font-size: 16px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background-color: #800080;
+            color: #FFF;
+        }
+        .btn-primary:hover {
+            background-color: #600060; /* Roxo escuro */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-5">Precisa de Ajuda?</h2>
+        <p>O 123 Ajuda foi criado com empatia para entender um pouco do que você está passando e encaminhar você para a rede de apoio psicossocial mais próxima de você.</p>
+        <p>Cadastre-se, você está a poucos passos de receber ajuda.</p>
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group mt-5">
+                <label for="{{ form.nome.id_for_label }}">Nome:</label>
+                {{ form.nome }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.email.id_for_label }}">Email:</label>
+                {{ form.email }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.senha.id_for_label }}">Senha:</label>
+                {{ form.senha }}
+            </div>
+
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
