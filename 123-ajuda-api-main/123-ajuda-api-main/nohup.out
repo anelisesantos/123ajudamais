@@ -1,0 +1,43 @@
+DATABASE_URL: mysql+mysqlconnector://root:!Ak34ncs.m@18.231.150.70/db_123_ajuda
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [13/Sep/2023 20:27:35] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2023 20:28:14] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2023 20:33:50] "GET / HTTP/1.1" 200 -
+[2023-09-13 20:39:55,281] ERROR in app: Exception on /unidades_de_saude [GET]
+Traceback (most recent call last):
+  File "/home/ec2-user/projeto_123_ajuda/123-ajuda-api/env/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/projeto_123_ajuda/123-ajuda-api/env/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/projeto_123_ajuda/123-ajuda-api/env/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/projeto_123_ajuda/123-ajuda-api/env/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/ec2-user/projeto_123_ajuda/123-ajuda-api/env/lib/python3.9/site-packages/flasgger/utils.py", line 305, in wrapper
+    return function(*args, **kwargs)
+  File "/home/ec2-user/projeto_123_ajuda/123-ajuda-api/app/modules/routes.py", line 19, in get_unidades
+    query = UnidadeDeSaude.query
+NameError: name 'UnidadeDeSaude' is not defined
+127.0.0.1 - - [13/Sep/2023 20:39:55] "[35m[1mGET /unidades_de_saude HTTP/1.1[0m" 500 -
+127.0.0.1 - - [13/Sep/2023 20:40:26] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Sep/2023 11:29:16] "GET / HTTP/1.1" 200 -
+[2023-09-25 11:29:33,770] ERROR in app: Exception on /unidades_de_saude [GET]
+Traceback (most recent call last):
+  File "/home/ec2-user/projeto_123_ajuda/123-ajuda-api/env/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/projeto_123_ajuda/123-ajuda-api/env/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/projeto_123_ajuda/123-ajuda-api/env/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/projeto_123_ajuda/123-ajuda-api/env/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/ec2-user/projeto_123_ajuda/123-ajuda-api/env/lib/python3.9/site-packages/flasgger/utils.py", line 305, in wrapper
+    return function(*args, **kwargs)
+  File "/home/ec2-user/projeto_123_ajuda/123-ajuda-api/app/modules/routes.py", line 19, in get_unidades
+    query = UnidadeDeSaude.query
+NameError: name 'UnidadeDeSaude' is not defined
+127.0.0.1 - - [25/Sep/2023 11:29:33] "[35m[1mGET /unidades_de_saude HTTP/1.1[0m" 500 -
+127.0.0.1 - - [25/Sep/2023 11:29:46] "[33mGET /unidade_de_saude HTTP/1.1[0m" 404 -

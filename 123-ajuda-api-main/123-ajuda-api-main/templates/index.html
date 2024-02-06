@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API de Unidades de Saúde do 123 Ajuda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2{
+            text-align: center;
+            color: #333;
+        }
+
+        h3{
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        ul{
+            margin-bottom: 10px; 
+        }
+        ol {
+            list-style: none;
+            padding: 0;
+        }
+
+        li:first-child {
+            margin-top: 10px; 
+        }
+        li {
+            margin-bottom: 10px;
+        }
+
+        code {
+            background-color: #f9f9f9;
+            padding: 2px 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bem-vindo à API de Unidades de Saúde</h1>
+        <p>Esta API fornece acesso a informações sobre unidades de saúde, incluindo detalhes sobre abrangência, endereço, contato e muito mais. Esta API esta disponivel somente para regiao do Distrito Federal</p>
+        <h2>Como Usar a API:</h2>
+        <ol>
+            <li><h3>Consultar Unidades de Saúde por Abrangência e UF:</h3>
+                <ul>
+                    <li>Endpoint: <code>https://123ajuda.tech/api/unidades_de_saude?abrangencia={abrangencia}&uf={uf}</code></li>
+                    <li>Método: GET</li>
+                    <li>Parâmetros:
+                        <ul>
+                            <li><code>abrangencia</code>: Tipo de abrangência desejado (por exemplo, "municipal", "estadual")</li>
+                            <li><code>uf</code>: Sigla do estado (por exemplo, "SP", "RJ")</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><h3>Consultar Detalhes de uma Unidade de Saúde por ID:</h3>
+                <ul>
+                    <li>Endpoint: <code>https://123ajuda.tech/api/unidades_de_saude/id/{id}</code></li>
+                    <li>Método: GET</li>
+                    <li>Parâmetros:
+                        <ul>
+                            <li><code>id</code>: ID único da unidade de saúde desejada</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><h3>Documentacao Swagger</h3>
+                <ul>
+                    <li>Endpoint: <code>https://123ajuda.tech/apidocs</code></li>
+                   
+                </ul>
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>
